@@ -1,0 +1,44 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "nsscdc.py",
+        "class": "NssCDC"
+    },
+    "METHODS": {
+        "push_query": {
+            "allowed_groups": [
+            	"anonymous"
+            ]
+        },
+        "wait_for_queries": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        },
+        "query_status": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        },
+        "getgrall": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        },
+        "getgrgid": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        },
+        "getgrnam": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        },
+        "clear_cache": {
+            "allowed_groups": [
+		"anonymous"
+            ]
+        }
+    }
+}
