@@ -8,7 +8,7 @@ import n4d.responses
 
 import time
 
-class NssCDC:
+class CDC:
 
     GROUP_NOT_EXISTS = -10
 
@@ -75,7 +75,7 @@ class NssCDC:
         list_groups = []
         dn_user_list = [ x[0] for x in self.ldap.search_s(self.base_dn, ldap.SCOPE_SUBTREE, "(cn={name})".format(name=user),["dn"]) if x[0] is not None ]
         for dn_user in dn_user_list:
-            list_groups  + [ x[1]['cn'][0].decode('utf-8') for x in self.ldap.search_s(self.base_dn, ldap.SCOPE_SUBTREE, "(member={name})".format(name=dn_user),["cn"]) if x[0] is not None ]
+            list_groups = list_groups  + [ x[1]['cn'][0].decode('utf-8') for x in self.ldap.search_s(self.base_dn, ldap.SCOPE_SUBTREE, "(member={name})".format(name=dn_user),["cn"]) if x[0] is not None ]
         
         for x in list(set(list_groups)):
             if x.lower().startswith("alu"):
@@ -120,7 +120,7 @@ class NssCDC:
         for x in self.cache_users.keys():
             if self.cache_users[x][0] == gid:
                 return n4d.responses.build_successful_call_response(x)
-        return n4d.responses.build_failed_call_response(NssCDC.GROUP_NOT_EXISTS)
+        return n4d.responses.build_failed_call_response(CDC.GROUP_NOT_EXISTS)
     #def getgrgid
 
     def getgrnam(self, name):
@@ -129,7 +129,7 @@ class NssCDC:
         '''
         if name in self.cache_users.keys():
             return n4d.responses.build_successful_call_response(self.cache_users[name][0])
-        return n4d.responses.build_failed_call_response(NssCDC.GROUP_NOT_EXISTS)
+        return n4d.responses.build_failed_call_response(CDC.GROUP_NOT_EXISTS)
     #def getgrnam
 
     def clear_cache(self):

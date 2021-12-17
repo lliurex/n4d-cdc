@@ -1,8 +1,8 @@
 {
     "SETUP": {
         "type": "python",
-        "path": "nsscdc.py",
-        "class": "NssCDC"
+        "path": "cdc.py",
+        "class": "CDC"
     },
     "METHODS": {
         "push_query": {
