@@ -1,2 +1,4 @@
 src/* /usr/share/n4d/python-plugins
 config/* /etc/n4d/conf.d/
+pam/nss_lliurex	/usr/share/pam-configs
+pam/cdc_trigger_map /usr/bin
