@@ -20,7 +20,7 @@ set -e
 
 case "$1" in
     configure)
-	    n4d-modules enable-plugin /etc/n4d/conf.d/NssCDC.json || true 
+	    n4d-modules enable-plugin /etc/n4d/conf.d/CDC.json || true 
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
