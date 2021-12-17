@@ -1,0 +1,6 @@
+Name: Trigger map CDC groups
+Default: yes
+Priority: 800
+Auth-Type: Primary
+Auth:
+	optional	pam_exec /usr/bin/cdc_trigger_map
