@@ -1,15 +1,16 @@
 Source: n4d-cdc
-Section: unknown
+Section: admin
 Priority: optional
-Maintainer: Raul Rodrigo Segura <raurodse@gmail.com>
+Maintainer: LliureX Team <lliurex@gva.es>
 Build-Depends: debhelper-compat (= 12)
 Standards-Version: 4.4.1
-Homepage: <insert the upstream URL, if relevant>
+Homepage: http://lliurex.net
 #Vcs-Browser: https://salsa.debian.org/debian/n4d-cdc
 #Vcs-Git: https://salsa.debian.org/debian/n4d-cdc.git
 
 Package: n4d-cdc
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, n4d, python3-ldap
+Description: backend map CDC groups to lliurex groups
+ n4d plugin to map active directory groups (Alumno, Docente) to 
+ LliureX groups (students, teachers)
