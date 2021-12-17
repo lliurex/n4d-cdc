@@ -21,6 +21,7 @@ set -e
 case "$1" in
     configure)
 	    n4d-modules enable-plugin /etc/n4d/conf.d/CDC.json || true 
+	    pam-auth-update --force --package n4d-cdc
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
