@@ -2,7 +2,6 @@ import ldap
 from pathlib import Path
 from configparser import ConfigParser
 import threading
-import collections
 
 import n4d.server.core
 import n4d.responses
