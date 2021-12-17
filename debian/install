@@ -1,0 +1,2 @@
+src/* /usr/share/n4d/python-plugins
+config/* /etc/n4d/conf.d/
