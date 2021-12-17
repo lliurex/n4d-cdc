@@ -8,7 +8,7 @@ import n4d.responses
 
 import time
 
-class NssCDC:
+class CDC:
 
     GROUP_NOT_EXISTS = -10
 
@@ -120,7 +120,7 @@ class NssCDC:
         for x in self.cache_users.keys():
             if self.cache_users[x][0] == gid:
                 return n4d.responses.build_successful_call_response(x)
-        return n4d.responses.build_failed_call_response(NssCDC.GROUP_NOT_EXISTS)
+        return n4d.responses.build_failed_call_response(CDC.GROUP_NOT_EXISTS)
     #def getgrgid
 
     def getgrnam(self, name):
@@ -129,7 +129,7 @@ class NssCDC:
         '''
         if name in self.cache_users.keys():
             return n4d.responses.build_successful_call_response(self.cache_users[name][0])
-        return n4d.responses.build_failed_call_response(NssCDC.GROUP_NOT_EXISTS)
+        return n4d.responses.build_failed_call_response(CDC.GROUP_NOT_EXISTS)
     #def getgrnam
 
     def clear_cache(self):
