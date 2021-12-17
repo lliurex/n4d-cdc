@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+
+import n4d.client
+import os
+
+c = n4d.client.Client("https://localhost:9779")
+c.CDC.push_query(os.environ["PAM_USER"])
