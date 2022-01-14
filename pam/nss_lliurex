@@ -3,4 +3,4 @@ Default: yes
 Priority: 0
 Auth-Type: Additional
 Auth:
-	optional	pam_exec /usr/bin/cdc_trigger_map
+	optional	pam_exec.so /usr/bin/cdc_trigger_map
