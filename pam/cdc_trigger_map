@@ -5,3 +5,4 @@ import os
 
 c = n4d.client.Client("https://localhost:9779")
 c.CDC.push_query(os.environ["PAM_USER"])
+c.CDC.wait_for_queries()
