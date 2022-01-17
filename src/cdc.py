@@ -94,8 +94,11 @@ class CDC:
             Sync function
             wait to all queries finish
         '''
-        for x in self.list_of_queries:
-            x.join()
+
+        list_of_queries = list(self.list_of_queries.keys())
+        for x in list_of_queries:
+            if x in self.list_of_queries:
+                x.join()
         return n4d.responses.build_successful_call_response(True)
     #def wait_for_queries
 
